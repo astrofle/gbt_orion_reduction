@@ -1,0 +1,91 @@
+# Pointings:
+
+AGBT02A_028_01_ : 05h35m14.374s -05d22'29.55"
+AGBT02A_028_02_ : 05h35m14.374s -05d22'29.55"
+AGBT02A_028_03_ :
+AGBT02A_028_04_ : 05h35m14.374s -05d22'29.55"
+AGBT02A_028_05_ : 05h35m14.374s -05d22'29.55"
+AGBT02A_028_06_ :
+
+# 02 P0
+cat logs/AGBT02A_028_02_P0_orion_spec_spw*_pol*_rms.log >> logs/AGBT02A_028_02_P0_orion_spec_rms.log
+stack.py -v --weight=list --weight_list=logs/AGBT02A_028_02_P0_orion_spec_rms.log --weight_list_cols='0,1' --v_min=-250e3 --v_max=250e3 specs/AGBT02A_028_02_P0_orion_spec_spw*_pol*_n*_proc.ascii  stacks/AGBT02A_028_02_P0_orion_spec_proc_stack_C280a.ascii
+
+# 02 P1
+cat logs/AGBT02A_028_02_P1_orion_spec_spw*_pol*_rms.log >> logs/AGBT02A_028_02_P1_orion_spec_rms.log
+stack.py -v --weight=list --weight_list=logs/AGBT02A_028_02_P1_orion_spec_rms.log --weight_list_cols='0,1' --v_min=-250e3 --v_max=250e3 specs/AGBT02A_028_02_P1_orion_spec_spw*_pol*_n{273,263,268,269,272,271}_proc.ascii  stacks/AGBT02A_028_02_P1_orion_spec_proc_stack_C268a.ascii
+
+# 02 P2
+cat logs/AGBT02A_028_02_P2_orion_spec_spw*_pol*_rms.log >> logs/AGBT02A_028_02_P2_orion_spec_rms.log
+stack.py -v --weight=list --weight_list=logs/AGBT02A_028_02_P2_orion_spec_rms.log --weight_list_cols='0,1' --v_min=-250e3 --v_max=250e3 specs/AGBT02A_028_02_P2_orion_spec_spw*_pol*_n{258,259,260,261}_proc.ascii  stacks/AGBT02A_028_02_P2_orion_spec_proc_stack_C260a.ascii
+
+# 02 S0
+cat logs/AGBT02A_028_02_S0_orion_spec_spw*_pol*_rms.log >> logs/AGBT02A_028_02_S0_orion_spec_rms.log
+stack.py -v --weight=list --weight_list=logs/AGBT02A_028_02_S0_orion_spec_rms.log --weight_list_cols='0,1' --v_min=-250e3 --v_max=250e3 specs/AGBT02A_028_02_S0_orion_spec_spw0_pol*_n{152..155}_proc.ascii stacks/AGBT02A_028_02_S0_orion_spec_spw0_proc_stack_C154a.ascii
+
+# 02 S4
+cat logs/AGBT02A_028_02_S4_orion_spec_spw0_pol*_rms.log >> logs/AGBT02A_028_02_S4_orion_spec_spw0_rms.log
+stack.py -v --weight=list --weight_list=logs/AGBT02A_028_02_S4_orion_spec_spw0_rms.log --weight_list_cols='0,1' --v_min=-250e3 --v_max=250e3 specs/AGBT02A_028_02_S4_orion_spec_spw0_pol*_n155_proc.ascii stacks/AGBT02A_028_02_S4_orion_spec_spw0_proc_stack_C155a.ascii
+
+# 02 S5
+cat logs/AGBT02A_028_02_S5_orion_spec_spw*_pol*_rms.log >> logs/AGBT02A_028_02_S5_orion_spec_rms.log
+stack.py -v --weight=list --weight_list=logs/AGBT02A_028_02_S5_orion_spec_rms.log --weight_list_cols='0,1' --v_min=-250e3 --v_max=250e3 specs/AGBT02A_028_02_S5_orion_spec_spw*_pol*_n{154,153}_proc.ascii stacks/AGBT02A_028_02_S5_orion_spec_proc_stack_C154a.ascii
+
+# 02 S4+S5
+cat logs/AGBT02A_028_02_S{4,5}_orion_spec_spw*_pol*_rms.log >> logs/AGBT02A_028_02_S4.5_orion_spec_rms.log
+stack.py -v --weight=list --weight_list=logs/AGBT02A_028_02_S4.5_orion_spec_rms.log --weight_list_cols='0,1' --v_min=-250e3 --v_max=250e3 specs/AGBT02A_028_02_S4_orion_spec_spw*_pol*_n*_proc.ascii specs/AGBT02A_028_02_S5_orion_spec_spw*_pol*_n*_proc.ascii  stacks/AGBT02A_028_02_S4.5_orion_spec_proc_stack_C154a.ascii
+
+# 02 S6
+cat logs/AGBT02A_028_02_S6_orion_spec_spw*_pol*_rms.log >> logs/AGBT02A_028_02_S6_orion_spec_rms.log
+stack.py -v --weight=list --weight_list=logs/AGBT02A_028_02_S6_orion_spec_rms.log --weight_list_cols='0,1' --v_min=-250e3 --v_max=250e3 specs/AGBT02A_028_02_S6_orion_spec_spw*_pol*_n*_proc.ascii  stacks/AGBT02A_028_02_S6_orion_spec_proc_stack_C153a.ascii
+
+# 02 S7
+cat logs/AGBT02A_028_02_S7_orion_spec_spw*_pol*_rms.log >> logs/AGBT02A_028_02_S7_orion_spec_rms.log
+stack.py -v --weight=list --weight_list=logs/AGBT02A_028_02_S7_orion_spec_rms.log --weight_list_cols='0,1' --v_min=-250e3 --v_max=250e3 specs/AGBT02A_028_02_S7_orion_spec_spw*_pol*_n*_proc.ascii  stacks/AGBT02A_028_02_S7_orion_spec_proc_stack_C152a.ascii
+
+# 02 S8
+cat logs/AGBT02A_028_02_S8_orion_spec_spw*_pol*_rms.log >> logs/AGBT02A_028_02_S8_orion_spec_rms.log
+stack.py -v --weight=list --weight_list=logs/AGBT02A_028_02_S8_orion_spec_rms.log --weight_list_cols='0,1' --v_min=-250e3 --v_max=250e3 specs/AGBT02A_028_02_S8_orion_spec_spw*_pol*_n*_proc.ascii  stacks/AGBT02A_028_02_S8_orion_spec_proc_stack_C150a.ascii
+
+# 02 S9
+
+# 02 S10
+cat logs/AGBT02A_028_02_S10_orion_spec_spw0_pol*_rms.log >> logs/AGBT02A_028_02_S10_orion_spec_spw0_rms.log
+stack.py -v --weight=list --weight_list=logs/AGBT02A_028_02_S10_orion_spec_spw0_rms.log --weight_list_cols='0,1' --v_min=-250e3 --v_max=250e3 specs/AGBT02A_028_02_S10_orion_spec_spw0_pol*_sig1_n148_proc.ascii stacks/AGBT02A_028_02_S10_orion_spec_spw0_sig1_proc_stack_C148a.ascii
+
+# 06 P2
+cat logs/AGBT02A_028_06_P2_orion_spec_spw*_pol*_rms.log >> logs/AGBT02A_028_06_P2_orion_spec_rms.log
+stack.py -v --weight=list --weight_list=logs/AGBT02A_028_06_P2_orion_spec_rms.log --weight_list_cols='0,1' --v_min=-250e3 --v_max=250e3 specs/AGBT02A_028_06_P2_orion_spec_spw*_pol*_n{223,224,227}_proc.ascii  stacks/AGBT02A_028_06_P2_orion_spec_proc_stack_C224a.ascii
+
+# 06 P3
+# Useless
+
+# 06 P4
+cat logs/AGBT02A_028_06_P4_orion_spec_spw*_pol*_rms.log >> logs/AGBT02A_028_06_P4_orion_spec_rms.log
+stack.py -v --weight=list --weight_list=logs/AGBT02A_028_06_P4_orion_spec_rms.log --weight_list_cols='0,1' --v_min=-250e3 --v_max=250e3 specs/AGBT02A_028_06_P4_orion_spec_spw*_pol*_n{215,216}_proc.ascii  stacks/AGBT02A_028_06_P4_orion_spec_proc_stack_C215a.ascii
+
+# 06 P5
+cat logs/AGBT02A_028_06_P5_orion_spec_spw*_pol*_rms.log >> logs/AGBT02A_028_06_P5_orion_spec_rms.log
+stack.py -v --weight=list --weight_list=logs/AGBT02A_028_06_P5_orion_spec_rms.log --weight_list_cols='0,1' --v_min=-250e3 --v_max=250e3 specs/AGBT02A_028_06_P5_orion_spec_spw*_pol*_n{209,211,212}_proc.ascii  stacks/AGBT02A_028_06_P5_orion_spec_proc_stack_C210a.ascii
+
+stack.py --weight=sigma2 --v_min=-250e3 --v_max=250e3 AGBT02A_028_04_S0_orion_spec_spw0_pol*_proc.ascii AGBT02A_028_04_S0_orion_spec_spw0_proc_stack.ascii
+
+stack.py --weight=sigma2 --v_min=-250e3 --v_max=250e3 specs/AGBT02A_028_04_S2_orion_spec_spw0_pol*_n{142..144}_proc.ascii AGBT02A_028_04_S2_orion_spec_spw0_proc_stack.ascii
+
+stack.py -v --weight=sigma2 --v_min=-250e3 --v_max=250e3 specs/AGBT02A_028_04_S3_orion_spec_spw0_pol*_n140_proc.ascii specs/AGBT02A_028_04_S3_orion_spec_spw0_proc_stack_n140.ascii
+
+stack.py -v --weight=sigma2 --v_min=-250e3 --v_max=250e3 specs/AGBT02A_028_04_S5_orion_spec_spw0_pol*_n{134,135}_proc.ascii specs/AGBT02A_028_04_S5_orion_spec_spw0_proc_stack.ascii
+
+stack.py -v --weight=sigma2 --v_min=-250e3 --v_max=250e3 specs/AGBT02A_028_04_S6_orion_spec_spw0_pol*_n*_proc.ascii specs/AGBT02A_028_04_S6_orion_spec_spw0_proc_stack.ascii
+
+cat *.log >> AGBT02A_028_04_S7_orion_spec_spw0_rms.log
+stack.py -v --weight=list --weight_list=AGBT02A_028_04_S7_orion_spec_spw0_rms.log --v_min=-250e3 --v_max=250e3 specs/AGBT02A_028_04_S7_orion_spec_spw0_pol*_n*_proc.ascii specs/AGBT02A_028_04_S7_orion_spec_spw0_proc_stack.ascii
+
+cat logs/AGBT02A_028_04_S8_orion_spec_spw0_pol*_rms.log >> logs/AGBT02A_028_04_S8_orion_spec_spw0_rms.log
+stack.py -v --weight=list --weight_list=AGBT02A_028_04_S8_orion_spec_spw0_rms.log --v_min=-250e3 --v_max=250e3 specs/AGBT02A_028_04_S8_orion_spec_spw0_pol*_n{156..158}_proc.ascii specs/AGBT02A_028_04_S8_orion_spec_spw0_proc_stack_C157a.ascii
+
+cat logs/AGBT02A_028_04_S9_orion_spec_spw0_pol*_rms.log >> logs/AGBT02A_028_04_S9_orion_spec_spw0_rms.log
+stack.py -v --weight=list --weight_list=logs/AGBT02A_028_04_S9_orion_spec_spw0_rms.log --weight_list_cols='0,1' --v_min=-250e3 --v_max=250e3 specs/AGBT02A_028_04_S9_orion_spec_spw0_pol*_n{{138..140},{142..151}}_proc.ascii stacks/AGBT02A_028_04_S9_orion_spec_spw0_proc_stack_C145a.ascii
+
+for spw in {0..1}; do for pol in {0..1}; do for sig in {0..1}; do echo $spw $pol $sig ; python get_spec.py AGBT02A_028_02 S12 $spw $pol $sig 1 ; done; done; done;
+for idx in {0..7}; do echo $idx; python3 proc_spec.py AGBT02A_028_02 S11 $idx 1 ; done

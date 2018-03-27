@@ -50,6 +50,8 @@ if __name__ == '__main__':
     ax.set_ylabel('$T_{A}$ (arbitrary units)')
     
     ax.minorticks_on()
+    ax.tick_params('both', direction='in', which='both',
+                    bottom=True, top=True, left=True, right=True)
     
     plt.savefig(output, 
                 bbox_inches='tight', 

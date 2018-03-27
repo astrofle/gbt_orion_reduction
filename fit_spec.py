@@ -24,8 +24,8 @@ if __name__ == '__main__':
     params_g0 = model_g0.make_params()
     params_g1 = model_g1.make_params()
     
-    params_g0['g0_center'].set(value=20, vary=True, max=30., min=-10.)
-    params_g0['g0_amplitude'].set(value=0.5, vary=True)#, min=1e-8)
+    params_g0['g0_center'].set(value=5., vary=True, max=30., min=-10.)
+    params_g0['g0_amplitude'].set(value=-0.5, vary=True)#, min=1e-8)
     params_g0['g0_sigma'].set(value=1., vary=True, min=0.1, max=20.)
     
     params_g1['g1_center'].set(value=-5.8, vary=True, max=15., min=-15.)
@@ -65,6 +65,8 @@ if __name__ == '__main__':
     ax.set_ylabel('$T_{A}$ (arbitrary units)')
     
     ax.minorticks_on()
+    ax.tick_params('both', direction='in', which='both',
+                    bottom=True, top=True, left=True, right=True)
     
     plt.savefig(output, 
                 bbox_inches='tight', 
